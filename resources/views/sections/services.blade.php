@@ -26,7 +26,7 @@
                     <h3>{{ $service['title'] }}</h3>
                     <p>{{ $service['description'] }}</p>
                     <a href="#portfolio" class="service-link">
-                        <span>0{{ $i + 1 }}</span>
+                        <span><i class="fa-solid fa-arrow-right"></i> View 0{{ $i + 1 }}</span>
                         <svg fill="none" viewBox="0 0 87 8"><path fill="currentColor" d="M86.354 4.354a.5.5 0 000-.708L83.172.464a.5.5 0 10-.707.708L85.293 4l-2.829 2.828a.5.5 0 10.708.708l3.182-3.182zM0 4.5h86v-1H0v1z"/></svg>
                     </a>
                 </div>

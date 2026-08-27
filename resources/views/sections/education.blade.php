@@ -3,12 +3,14 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title text-center wow">
-                    <span>Education & Experience</span>
-                    <h2>My Academic Background<br>& Professional Journey</h2>
+                    <span>Education</span>
+                    <h2>My Academic Background<br>& Certificates</h2>
                 </div>
             </div>
+        </div>
 
-            <div class="col-xl-6 col-md-6 col-12 leftex wow delay-1">
+        <div class="row">
+            <div class="col-6 leftex wow delay-1">
                 <h4 class="subtitle">Education</h4>
                 @foreach($education as $i => $edu)
                     <div class="single-expert">
@@ -27,18 +29,26 @@
                 @endforeach
             </div>
 
-            <div class="col-xl-6 col-md-6 col-12 rightex wow delay-2">
-                <h4 class="subtitle">Experience</h4>
-                @foreach($experience as $i => $exp)
+            <div class="col-6 rightex wow delay-2">
+                <h4 class="subtitle">Certificates</h4>
+                @foreach($certificates as $i => $cert)
                     <div class="single-expert">
                         <div class="row align-items-center">
-                            <div class="col-3">
-                                <span class="exnumber">0{{ $i + 1 }}</span>
+                            <div class="col-4">
+                                <button type="button"
+                                    class="cert-thumb"
+                                    data-lightbox
+                                    data-image="{{ asset($cert['image']) }}"
+                                    data-title="{{ $cert['title'] }}"
+                                    data-date="{{ $cert['date'] }}"
+                                    data-desc="Certificate of completion">
+                                    <img src="{{ asset($cert['image']) }}" alt="{{ $cert['title'] }}">
+                                </button>
                             </div>
-                            <div class="col-9">
+                            <div class="col-8">
                                 <div class="excontent">
-                                    <span class="exdate">{{ $exp['date'] }}</span>
-                                    <h4>{{ $exp['title'] }}</h4>
+                                    <span class="exdate">{{ $cert['date'] }}</span>
+                                    <h4>{{ $cert['title'] }}</h4>
                                 </div>
                             </div>
                         </div>

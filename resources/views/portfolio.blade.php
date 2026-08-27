@@ -8,6 +8,8 @@
     @include('sections.education')
     @include('sections.portfolio')
     @include('sections.contact')
+    @include('sections.resume-modal')
+    @include('sections.lightbox-modal')
 
     <footer class="site-footer">
         <div class="container">
