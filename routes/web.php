@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $profile = [
-        'name' => 'Criszle',
-        'full_name' => 'Criszle Laureta Acosta',
-        'title' => 'Web Developer',
-        'tagline' => 'Solution-oriented mindset, problem-solving enthusiasm, positive attitude towards challenges, overcoming obstacles with enthusiasm.',
+        'name' => 'Darilyn B. Acosta',
+        'full_name' => 'Darilyn B. Acosta',
+        'title' => 'BS Information Technology Student | Aspiring Web Developer  ',
+        'tagline' => 'Passionate about building responsive, user-friendly websites with a solution-oriented mindset. I enjoy solving problems, embracing challenges, and continuously learning to create innovative digital experiences.',
         'bio' => "Hello! I'm a professional web developer providing awesome design and development stuff for clients. My vision is to satisfy my clients with high-quality work.",
-        'bio_extra' => 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.',
+        'bio_extra' => 'I am dedicated to delivering quality work, paying attention to detail, and continuously expanding my knowledge in web design and development. My goal is to grow as a professional IT specialist and contribute innovative, reliable, and creative solutions to every project I work on.',
     ];
 
     $stats = [
@@ -28,15 +28,14 @@ Route::get('/', function () {
     ];
 
     $education = [
-        ['date' => '2020 - 2024', 'title' => 'BS in Information Systems'],
-        ['date' => '2022', 'title' => 'Web Development Bootcamp'],
-        ['date' => '2023', 'title' => 'UI/UX Design Fundamentals'],
+        ['date' => '2023- Present', 'title' => 'Data Center College of the Philippines- Bangueed • BS in Information Technology '],
+        ['date' => '2013-2019', 'title' => 'Abra High School • General Academic Strand'],
     ];
 
-    $experience = [
-        ['date' => '2023 - 2024', 'title' => 'Freelance Web Developer'],
-        ['date' => '2022 - 2023', 'title' => 'Junior Developer at TechStudio'],
-        ['date' => '2021 - 2022', 'title' => 'Web Dev Intern at StartupCo'],
+    $certificates = [
+        ['date' => 'June 26, 2025', 'title' => 'Empowering the Next Gen: ICT Career Prep Essentials Webinar', 'image' => 'images/certificates/cert1.jpg'],
+        ['date' => 'September 06, 2025', 'title' => 'COMPUTER SYSTEMS SERVICING NCII', 'image' => 'images/certificates/nc2.jpg'],
+        ['date' => 'July 23, 2026', 'title' => 'ONLINE SAFETY THROUGH NETIQUETTE', 'image' => 'images/certificates/cert2.jpg'],
     ];
 
     $services = [
@@ -50,61 +49,41 @@ Route::get('/', function () {
 
     $projects = [
         [
-            'title' => 'E-Commerce Platform',
-            'category' => 'Web Development',
-            'filter' => 'branding',
-            'tags' => ['Laravel', 'Vue.js', 'MySQL'],
+            'title' => 'Happy Stem by Carmencita',
+            'description' => 'Interactive E-Catalogue System is a web-based application that allows customers to browse and explore the flower shop\'s products through an interactive and user-friendly digital catalogue. It helps improve product presentation, customer convenience, and the overall efficiency of the business.',
+            'category' => '',
+            'filter' => '',
+            'tags' => ['PHP'],
+            'image' => 'images/projects/happystem.jpg',
         ],
         [
-            'title' => 'Task Management App',
-            'category' => 'Web Application',
-            'filter' => 'marketing',
-            'tags' => ['React', 'Node.js', 'Socket.io'],
-        ],
-        [
-            'title' => 'Weather Dashboard',
-            'category' => 'Frontend',
-            'filter' => 'photography',
-            'tags' => ['JavaScript', 'API', 'Chart.js'],
-        ],
-        [
-            'title' => 'Portfolio CMS',
-            'category' => 'CMS',
-            'filter' => 'branding',
-            'tags' => ['PHP', 'Laravel', 'Tailwind'],
-        ],
-        [
-            'title' => 'Social Media Analytics',
-            'category' => 'Dashboard',
-            'filter' => 'marketing',
-            'tags' => ['Vue.js', 'D3.js', 'Firebase'],
-        ],
-        [
-            'title' => 'Recipe Sharing Platform',
-            'category' => 'Web Application',
-            'filter' => 'photography',
-            'tags' => ['React', 'GraphQL', 'MongoDB'],
+            'title' => 'Permanent Record',
+            'description' => 'A Permanent Record Management System built as a Windows Form Application, designed to store, update, and manage comprehensive student information such as personal details, address, educational background, and parent/guardian data. It features functional buttons (Save, Update, Delete, Clear, Search, Display) that allow users to perform basic CRUD operations on student records.',
+            'category' => '',
+            'filter' => '',
+            'tags' => ['VB.Net'],
+            'image' => 'images/projects/vb.jpg',
         ],
     ];
 
     $contact = [
-        'email' => 'criszleacosta@email.com',
-        'phone' => '+63 912 345 6789',
-        'location' => 'Rizal, Philippines',
+        'email' => 'acostadarilyn8@gmail.com',
+        'phone' => '+63 9664 128 941',
+        'location' => 'Zone 1, Linasin Bangued Abra, Philippines',
     ];
 
     $socials = [
-        ['name' => 'Facebook', 'url' => '#', 'icon' => 'facebook'],
-        ['name' => 'Twitter', 'url' => '#', 'icon' => 'twitter'],
-        ['name' => 'LinkedIn', 'url' => '#', 'icon' => 'linkedin'],
-        ['name' => 'GitHub', 'url' => '#', 'icon' => 'github'],
-        ['name' => 'Dribbble', 'url' => '#', 'icon' => 'dribbble'],
+        ['name' => 'Facebook', 'url' => 'https://www.facebook.com/darilynnylirad.acosta', 'icon' => 'facebook'],
+        ['name' => 'TikTok', 'url' => 'https://www.tiktok.com/@darilyn.acosta', 'icon' => 'tiktok'],
+        ['name' => 'GitHub', 'url' => 'https://github.com/DarilynAcosta', 'icon' => 'github'],
+        ['name' => 'Discord', 'url' => 'https://discord.com/users/1448616519855767673', 'icon' => 'discord'],
+        ['name' => 'Telegram', 'url' => 'https://t.me/+639664128941', 'icon' => 'telegram'],
     ];
 
     $services_footer = ['Web Development', 'UI/UX Design', 'E-Commerce', 'CMS Development', 'Responsive Design'];
 
     return view('portfolio', compact(
-        'profile', 'stats', 'skills', 'education', 'experience',
+        'profile', 'stats', 'skills', 'education', 'certificates',
         'services', 'projects', 'contact', 'socials', 'services_footer'
     ));
 });
