@@ -6,6 +6,8 @@ public/index.php
 .git
 tests
 storage/logs
+.phpunit.result.cache
+.phpunit.cache
 
 prompt_log.md
 opencode.json

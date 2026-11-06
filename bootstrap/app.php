@@ -18,9 +18,10 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-// Vercel's filesystem is read-only except /tmp, so relocate writable storage there.
+// Vercel's filesystem is read-only except /tmp, so relocate writable paths there.
 if (env('VERCEL') || isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL'])) {
-    $storagePath = '/tmp/storage';
+    $storagePath = env('APP_STORAGE', '/tmp/storage');
+    $bootstrapCachePath = '/tmp/bootstrap/cache';
 
     foreach ([
         $storagePath,
@@ -30,6 +31,7 @@ if (env('VERCEL') || isset($_ENV['VERCEL']) || isset($_SERVER['VERCEL'])) {
         $storagePath.'/framework/sessions',
         $storagePath.'/framework/views',
         $storagePath.'/logs',
+        $bootstrapCachePath,
     ] as $directory) {
         if (! is_dir($directory)) {
             mkdir($directory, 0775, true);
