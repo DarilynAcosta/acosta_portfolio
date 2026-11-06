@@ -1,0 +1,12 @@
+node_modules
+public/index.php
+
+.env
+.env.*
+.git
+tests
+storage/logs
+
+prompt_log.md
+opencode.json
+README.md
