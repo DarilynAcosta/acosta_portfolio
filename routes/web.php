@@ -33,9 +33,13 @@ Route::get('/', function () {
     ];
 
     $certificates = [
-        ['date' => 'June 26, 2025', 'title' => 'Empowering the Next Gen: ICT Career Prep Essentials Webinar', 'image' => 'images/certificates/cert1.jpg'],
-        ['date' => 'September 06, 2025', 'title' => 'COMPUTER SYSTEMS SERVICING NCII', 'image' => 'images/certificates/nc2.jpg'],
+        ['date' => 'October 21, 2026', 'title' => 'Introduction to Modern AI', 'image' => 'images/certificates/cert5.jpg'],
+        ['date' => 'September 07, 2026', 'title' => 'Understanding Startups & Getting Your Idea Ready for the Philippine Startup Challenge XI', 'image' => 'images/certificates/cert4.jpg'],
         ['date' => 'July 23, 2026', 'title' => 'ONLINE SAFETY THROUGH NETIQUETTE', 'image' => 'images/certificates/cert2.jpg'],
+        ['date' => 'July 23, 2026', 'title' => 'Stay Alert, Stay Secure: Promoting Cyber Awareness and Online Scam Prevention', 'image' => 'images/certificates/cert6.jpg'],
+        ['date' => 'December 12, 2025', 'title' => 'SEEDLING 2025 Series: Design Thinking', 'image' => 'images/certificates/cert3.jpg'],
+        ['date' => 'September 06, 2025', 'title' => 'COMPUTER SYSTEMS SERVICING NCII', 'image' => 'images/certificates/nc2.jpg'],
+        ['date' => 'June 26, 2025', 'title' => 'Empowering the Next Gen: ICT Career Prep Essentials Webinar', 'image' => 'images/certificates/cert1.jpg'],
     ];
 
     $services = [
@@ -47,7 +51,22 @@ Route::get('/', function () {
         ['icon' => 'api', 'title' => 'API Integration', 'description' => 'Connecting third-party services and building RESTful APIs for seamless data flow.'],
     ];
 
+    $attendanceImages = array_values(array_filter([
+        'images/projects/attendance1.jpg',
+        'images/projects/attendance2.jpg',
+        'images/projects/attendance3.jpg',
+    ], fn ($image) => file_exists(public_path($image))));
+
     $projects = [
+        [
+            'title' => 'QR Code Event Attendance System',
+            'description' => 'A web-based attendance management system for DCCP-Bangued that uses QR codes to check students in and out of events. It features event and student records, real-time attendance monitoring, automated status tracking, and a dashboard for administrators.',
+            'category' => '',
+            'filter' => '',
+            'tags' => ['PHP', 'Laravel', 'MySQL'],
+            'image' => $attendanceImages[0],
+            'images' => $attendanceImages,
+        ],
         [
             'title' => 'Happy Stem by Carmencita',
             'description' => 'Interactive E-Catalogue System is a web-based application that allows customers to browse and explore the flower shop\'s products through an interactive and user-friendly digital catalogue. It helps improve product presentation, customer convenience, and the overall efficiency of the business.',
@@ -55,6 +74,9 @@ Route::get('/', function () {
             'filter' => '',
             'tags' => ['PHP'],
             'image' => 'images/projects/happystem.jpg',
+            'images' => [
+                'images/projects/happystem.jpg',
+            ],
         ],
         [
             'title' => 'Permanent Record',
@@ -63,6 +85,9 @@ Route::get('/', function () {
             'filter' => '',
             'tags' => ['VB.Net'],
             'image' => 'images/projects/vb.jpg',
+            'images' => [
+                'images/projects/vb.jpg',
+            ],
         ],
     ];
 

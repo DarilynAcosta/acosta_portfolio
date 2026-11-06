@@ -7,6 +7,13 @@
         <div class="lightbox-body">
             <div class="lightbox-image">
                 <img src="" id="lightboxImage" alt="">
+                <button type="button" class="lightbox-nav lightbox-prev" data-lightbox-prev aria-label="Previous image">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button type="button" class="lightbox-nav lightbox-next" data-lightbox-next aria-label="Next image">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
             </div>
             <div class="lightbox-info">
                 <h3 id="lightboxTitle"></h3>
